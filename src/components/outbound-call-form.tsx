@@ -263,7 +263,7 @@ export function OutboundCallForm() {
                 <FormItem>
                   <FormLabel>Agent Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g., MIA" {...field} />
+                    <Input placeholder="e.g., Alexa" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
