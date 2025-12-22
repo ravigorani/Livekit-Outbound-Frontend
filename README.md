@@ -1,5 +1,2 @@
-# Firebase Studio
-
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+# CheckOut Live Project
+https://livekit-outbound-frontend-3se7.vercel.app
