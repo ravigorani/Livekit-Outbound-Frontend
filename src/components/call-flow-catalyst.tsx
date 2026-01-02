@@ -23,7 +23,7 @@ export function CallFlowCatalyst() {
       </CardHeader>
       <CardContent className="space-y-8">
         <RadioGroup
-          defaultValue="inbound"
+          defaultValue="outbound"
           onValueChange={(value: CallType) => setCallType(value)}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
