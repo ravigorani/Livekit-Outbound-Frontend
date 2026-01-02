@@ -11,7 +11,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 type CallType = "inbound" | "outbound";
 
 export function CallFlowCatalyst() {
-  const [callType, setCallType] = useState<CallType>("inbound");
+  const [callType, setCallType] = useState<CallType>("outbound");
 
   return (
     <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in-0 zoom-in-95 duration-500">
