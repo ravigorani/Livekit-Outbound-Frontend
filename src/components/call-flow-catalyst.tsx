@@ -27,6 +27,13 @@ export function CallFlowCatalyst() {
           onValueChange={(value: CallType) => setCallType(value)}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
+            <Label htmlFor="outbound" className="[&:has([data-state=checked])]:border-primary rounded-lg border-2 border-muted bg-transparent hover:border-primary/80 p-4 transition-all cursor-pointer flex flex-col items-center justify-center text-center">
+              <RadioGroupItem value="outbound" id="outbound" className="sr-only" />
+                <LogOut className="h-8 w-8 mb-2 text-primary" />
+                <p className="font-semibold">Outbound Call</p>
+                <p className="text-sm text-muted-foreground">Initiate automated calls.</p>
+            </Label>
+          
             <Label htmlFor="inbound" className="[&:has([data-state=checked])]:border-primary rounded-lg border-2 border-muted bg-transparent hover:border-primary/80 p-4 transition-all cursor-pointer flex flex-col items-center justify-center text-center">
               <RadioGroupItem value="inbound" id="inbound" className="sr-only" />
                 <LogIn className="h-8 w-8 mb-2 text-primary" />
@@ -34,17 +41,12 @@ export function CallFlowCatalyst() {
                 <p className="text-sm text-muted-foreground">Receive automated calls.</p>
             </Label>
           
-            <Label htmlFor="outbound" className="[&:has([data-state=checked])]:border-primary rounded-lg border-2 border-muted bg-transparent hover:border-primary/80 p-4 transition-all cursor-pointer flex flex-col items-center justify-center text-center">
-              <RadioGroupItem value="outbound" id="outbound" className="sr-only" />
-                <LogOut className="h-8 w-8 mb-2 text-primary" />
-                <p className="font-semibold">Outbound Call</p>
-                <p className="text-sm text-muted-foreground">Initiate automated calls.</p>
-            </Label>
+            
         </RadioGroup>
         
         <div className="transition-all duration-300">
-           {callType === 'inbound' && <InboundCallForm key="inbound" />}
            {callType === 'outbound' && <OutboundCallForm key="outbound" />}
+           {callType === 'inbound' && <InboundCallForm key="inbound" />}
         </div>
       </CardContent>
     </Card>
